@@ -42,7 +42,7 @@ go func() {
 ```bash
 go run L1.5.go
 ```
-<img width="354" height="179" alt="image" src="https://github.com/user-attachments/assets/71449d1b-bbb8-4bf5-83a7-7f8bc78ff54d" />
+<p align = "center"><img width="354" height="179" alt="image" src="https://github.com/user-attachments/assets/71449d1b-bbb8-4bf5-83a7-7f8bc78ff54d" /></p>
 
 
 ## Весь код
