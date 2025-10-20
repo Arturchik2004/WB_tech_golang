@@ -25,41 +25,40 @@
 
 
 2.  Создает конвейер из двух этапов (двух горутин):
-    . Горутина читает числа из исходного массива и отправляет их в первый канал.
+   
+    - Горутина читает числа из исходного массива и отправляет их в первый канал.
+      ```go 
+    	func res(elem <-chan int, result chan<- int) {
+	   	 	for val := range elem {
+		    	result <- val * 2
+	    	}
+	    	close(result)
+    	}
 
-    ```go 
-    ...
-    func res(elem <-chan int, result chan<- int) {
-	    for val := range elem {
-		    result <- val * 2
-	    }
-	    close(result)
-    }
-    ...
-
-    func main(){
-        ...
-        for _, val := range m {
-		    elem <- val
-	    }
-        close(elem)
-        ...
-    }
-    ```
-    . Вторая горутина читает числа из первого канала, умножает каждое на 2 и выводит результат в консоль.
-    ```go
-    ...
-    func res2(results <-chan int, wg *sync.WaitGroup) {
-	    defer wg.Done()
-	    for val := range results {
-		    fmt.Println(val * val)
-	    }
-    }
-    ...
-    ```
+    	func main(){
+        	...
+        	for _, val := range m {
+		    	elem <- val
+	    	}
+        	close(elem)
+    	} 
+		```
+    - Вторая горутина читает числа из первого канала, умножает каждое на 2 и выводит результат в консоль.
+	
+		```go
+    
+    	...
+    	func res2(results <-chan int, wg *sync.WaitGroup) {
+	    	defer wg.Done()
+	    	for val := range results {
+		    	fmt.Println(val * val)
+	    	}
+    	}
+    	...
+		```
     
 
-3.  Программа корректно ожидает завершения всех операций перед выходом, используя `sync.WaitGroup`.
+4.  Программа корректно ожидает завершения всех операций перед выходом, используя `sync.WaitGroup`.
 
     ```go
     var wg sync.WaitGroup
@@ -85,8 +84,8 @@
 ## Пример работы
 
 **Ввод:**
-```1 2 3 4 5
-```
+```1 2 3 4 5```
+
 **Вывод:**
 ```
 1
