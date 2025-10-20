@@ -1,4 +1,4 @@
-# Конвейер чисел на Go
+# L1.9 Конвейер чисел на Go
 <img width="805" height="495" alt="image" src="https://github.com/user-attachments/assets/998e9397-4016-410f-b1ba-aec415b12710" />
 
 
