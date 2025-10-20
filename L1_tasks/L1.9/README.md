@@ -1,4 +1,6 @@
 # Конвейер чисел на Go
+<img width="805" height="495" alt="image" src="https://github.com/user-attachments/assets/998e9397-4016-410f-b1ba-aec415b12710" />
+
 
 Этот код демонстрирует создание простого конвейера с использованием горутин и каналов в языке Go.
 
