@@ -1,5 +1,6 @@
 # L1.11 — Пересечение двух срезов
 
+<img width="784" height="515" alt="image" src="https://github.com/user-attachments/assets/992a63c6-ef19-45ce-8ad9-2f93a5ec77db" />
 
 
 ## Описание 
@@ -61,7 +62,7 @@ cd L1_tasks\\L1.11
 2. Запустите программу:
 ```powershell
 go run L1.11.go
-
+```
 Ввод 
 
 ```bash
@@ -71,5 +72,6 @@ go run L1.11.go
 2 3 4
 Пересечение [2 3]
 ```
+
 
 
