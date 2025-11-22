@@ -1,8 +1,8 @@
 <img width="856" height="508" alt="image" src="https://github.com/user-attachments/assets/7cdac070-a003-4e37-b3e4-fa68e9e05411" />
 # Быстрая сортировка (quicksort)
-Я реализовал быструю сортировку 
 
-# Функция quicksort
+
+## Функция quicksort
 quickSort реализует алгоритм быстрой сортировки.
 
 
@@ -52,7 +52,7 @@ quickSort реализует алгоритм быстрой сортировк�
 }
 ```
 
-# Запуск программы
+## Запуск программы
 
 ```bash
 go run L1.16.go
