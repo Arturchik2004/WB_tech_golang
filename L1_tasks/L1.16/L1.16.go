@@ -2,40 +2,38 @@ package main
 
 import (
 	"fmt"
-	"sort"
+	"math/rand"
+	"time"
 )
 
-func heapyfy(arr []int, n int, i int) {
-	l := i
-	left := 2*i + 1
-	right := 2*i + 2
-	if left < n && arr[l] < arr[left] {
-		l = left
+func quickSort(arr []int) {
+	if len(arr) < 2 {
+		return
 	}
-	if right < n && arr[l] < arr[right] {
-		l = right
+	left, right := 0, len(arr)-1
+	rand.Seed(time.Now().UnixNano())
+	pivotIndex := rand.Intn(len(arr))
+	pivot := arr[pivotIndex]
+	arr[pivotIndex], arr[right] = arr[right], arr[pivotIndex]
+	for i := range arr {
+		if arr[i] < pivot {
+			arr[left], arr[i] = arr[i], arr[left]
+			left++
+		}
 	}
-	if l != i {
-		arr[i], arr[l] = arr[l], arr[i]
-		heapyfy(arr, n, l)
-	}
-}
-func heap_sort(arr []int) {
-	n := len(arr)
-	for i := n/2 - 1; i >= 0; i-- {
-		heapyfy(arr, n, i)
-	}
-	for i := n - 1; i > 0; i-- {
-		arr[0], arr[i] = arr[i], arr[0]
-		heapyfy(arr, i, 0)
-	}
+
+	arr[left], arr[right] = arr[right], arr[left]
+
+	quickSort(arr[:left])
+	quickSort(arr[left+1:])
 }
 
 func main() {
-	arr1 := []int{1234, 23, 2342, 233444, 2, -123, 0, 34, 234}
 	arr := []int{1234, 23, 2342, 233444, 2, -123, 0, 34, 234}
-	heap_sort(arr1)
-	sort.Ints(arr)
-	fmt.Println(arr1)
-	fmt.Println(arr)
+
+	fmt.Println("Неотсортированный массив:", arr)
+
+	quickSort(arr)
+
+	fmt.Println("Отсортированный массив:  ", arr)
 }
