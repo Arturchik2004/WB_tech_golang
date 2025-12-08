@@ -9,7 +9,7 @@ type LegacyPrinter interface {
 type OldPrinter struct{}
 
 func (p *OldPrinter) PrintLegacy(text string) string {
-	return "Legacy Printer: " + text
+	return text + " - хорошо забытое старое"
 }
 
 type ModernPrinter interface {
@@ -33,6 +33,6 @@ func main() {
 	}
 
 	var modernPrinter ModernPrinter = adapter
-	result := modernPrinter.PrintModern("Hello from Go!")
+	result := modernPrinter.PrintModern("Все новое")
 	fmt.Println(result)
 }
