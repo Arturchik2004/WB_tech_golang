@@ -26,3 +26,21 @@ func removeElement(slice []int, i int) []int {
 ```bash
 go run L1.23.go
 ```
+# Вывод кода
+
+```
+До удаления:
+[0] Alice (ID: 1)
+[1] Bob (ID: 2)
+[2] Charlie (ID: 3)
+[3] Dave (ID: 4)
+[4] Eve (ID: 5)
+
+После удаления (удален Charlie):
+[0] Alice (ID: 1)
+[1] Bob (ID: 2)
+[2] Dave (ID: 4)
+[3] Eve (ID: 5)
+
+Len: 4, Cap: 5
+```
