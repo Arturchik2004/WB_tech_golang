@@ -1,4 +1,5 @@
 # L1.23
+<img width="805" height="512" alt="image" src="https://github.com/user-attachments/assets/034fca00-0f5a-487e-bb30-c7ff8b50f881" />
 
 ## Описание
 
